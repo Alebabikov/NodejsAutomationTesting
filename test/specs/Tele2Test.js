@@ -1,12 +1,12 @@
-describe('Tele2 main page test',async()=>{                                                                              //describe it - описание теста с асинхронными функциями
+describe('Tele2 main page test',async()=>{                                                                              //describe it - описание тестового сценария с асинхронными функциями
 
     it('Запускаю основную страницы Tele2-ЛК',async()=>{
 
         await browser.url("https://nnov.tele2.ru/lk");                                                                  // подождет(await), пока запуститься браузер и страница, затем перейдет к следующему шагу
-        await expect(browser).toHaveUrl("https://nnov.tele2.ru/lk");                                                    // проверка, что url адрес соответствует указанному
-        await expect(browser).toHaveTitle("Личный кабинет Tele2 - вход по номеру телефона Нижегородская область");      // проверка заголовка вкладки
+        await expect(browser).toHaveUrl("https://nnov.tele2.ru/lk");                                                    // проверка url адреса (except - ожидаю)
+        await expect(browser).toHaveTitle("Личный кабинет Tele2 - вход по номеру телефона Нижегородская область");      // проверка заголовка вкладки 
         console.log(await browser.getTitle());                                                                          // выведет заголовок сайта, подождет, пока не напечатается полностью 
-      
+        
 
 
     });
