@@ -5,13 +5,13 @@ const HelpAndSupportPage = require('../../src/pages/HelpAndSupportPage');
 
 describe('Вопросы и ответы |', async()=>{
 
-    it('Переход к разделу "Вопросы и ответЫ"', async()=>{
+    it('Переход к разделу "Вопросы и ответы"', async()=>{
 
         await BasePage.navigateToUrl();
         await homePage.CloseAndOpenQuestions();
-        await HelpAndSupportPage.ClickField();
-        await HelpAndSupportPage.SendText()
-        browser.pause(5000) 
+        //await HelpAndSupportPage.ClickField();
+        await HelpAndSupportPage.SendText();
+        await browser.pause(5000);
 
     })
 })

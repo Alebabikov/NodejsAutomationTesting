@@ -4,13 +4,12 @@ module.exports = new class HelpAndSupportPage {
         return $("div>input[type='text']");
     }
 
-    async CliuckField(){
+    async ClickField(){
         await this.searchField.click();
-        browser.pause(2000);
-        
     }
 
     async SendText(){
-        await this.searchField.toHaveValue('нет денег')
+        await this.searchField.setValue('нет денег')
     }
 }
+
